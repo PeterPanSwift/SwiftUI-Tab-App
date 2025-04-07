@@ -1,3 +1,11 @@
+//
+//  BookList.swift
+//  Demo2
+//
+//  Created by SHIH-YING PAN on 2025/4/7.
+//
+import SwiftUI
+
 struct BookList: View {
     let books = [
         Book(
@@ -19,12 +27,19 @@ struct BookList: View {
             List {
                 ForEach(0..<books.count) { item in
                     let book = books[item]
-                    NavigationLink(book.name) {
+                    NavigationLink {
                         BookDetail(book: book)
+                    } label: {
+                        BookRow(book: book)
                     }
                 }
             }
             .navigationTitle("好看的書")
         }
     }
+}
+
+
+#Preview {
+    BookList()
 }
