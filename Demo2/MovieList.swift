@@ -26,8 +26,8 @@ struct MovieList: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(0..<movies.count) { item in
-                    let movie = movies[item]
+                ForEach(0..<movies.count) { index in
+                    let movie = movies[index]
                     NavigationLink {
                         MovieDetail(movie: movie)
                     } label: {
