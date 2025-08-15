@@ -25,8 +25,8 @@ struct BookList: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(0..<books.count) { item in
-                    let book = books[item]
+                ForEach(0..<books.count) { index in
+                    let book = books[index]
                     NavigationLink {
                         BookDetail(book: book)
                     } label: {
